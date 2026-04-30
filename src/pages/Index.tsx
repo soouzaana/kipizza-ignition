@@ -1,8 +1,9 @@
 import { MapPin, MessageCircle, UtensilsCrossed, Sparkles, Instagram } from "lucide-react";
 import heroPizza from "@/assets/hero-pizza.jpg";
+import Logo from "@/assets/logo.png";
 
-const WHATSAPP_URL = "https://wa.me/5569999999999?text=Ol%C3%A1%20Ki%20Pizza%2C%20quero%20fazer%20um%20pedido!";
-const PEDIDO_URL = "#cardapio";
+const WHATSAPP_URL = "https://wa.me/5569993953653?text=Ol%C3%A1%20Ki%20Pizza%2C%20quero%20fazer%20um%20pedido!";
+const PEDIDO_URL = "https://pedido.anota.ai/";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Ki+Pizza+Jaru+Rondonia";
 
 const Index = () => {
@@ -39,10 +40,9 @@ const Index = () => {
           {/* Content */}
           <div className="px-6 pb-6 -mt-6 relative">
             {/* Logo / Brand mark */}
-            <div className="flex justify-center">
+            <div className="flex justify-center ">
               <div className="relative h-20 w-20 rounded-2xl bg-gradient-to-br from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] flex items-center justify-center shadow-[0_15px_40px_-12px_hsl(var(--brand-red)/0.7)] border border-[hsl(var(--brand-gold)/0.4)] rotate-3">
-                <span className="font-display font-extrabold text-2xl text-[hsl(var(--brand-cream))] -rotate-3 leading-none">Ki</span>
-                <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 text-[9px] font-bold tracking-[0.3em] uppercase text-[hsl(var(--brand-gold))] bg-background px-2 py-0.5 rounded-full border border-[hsl(var(--brand-gold)/0.5)]">Pizza</span>
+                <img src={Logo} alt="Ki Pizza Logo" className="h-full w-full rounded-2xl" width={50} height={50} />
               </div>
             </div>
 
@@ -62,26 +62,8 @@ const Index = () => {
             {/* CTA Stack */}
             <nav className="mt-5 space-y-2.5" aria-label="Ações principais">
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-green animate-pulse-glow hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="h-9 w-9 rounded-xl bg-[hsl(var(--brand-cream)/0.15)] flex items-center justify-center group-hover:rotate-6 transition-transform">
-                    <MessageCircle className="h-5 w-5" />
-                  </span>
-                  <span className="flex flex-col items-start leading-tight">
-                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">Pedir agora</span>
-                    <span className="text-base">WhatsApp</span>
-                  </span>
-                </span>
-                <span className="text-xl opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-              </a>
-
-              <a
                 href={PEDIDO_URL}
-                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-red hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
+                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-red animate-pulse-glow hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
               >
                 <span className="flex items-center gap-3">
                   <span className="h-9 w-9 rounded-xl bg-[hsl(var(--brand-cream)/0.15)] flex items-center justify-center group-hover:rotate-6 transition-transform">
@@ -94,6 +76,24 @@ const Index = () => {
                 </span>
                 <span className="text-xl opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
               </a>
+              
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-green  hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
+              >
+                <span className="flex items-center gap-3">
+                  <span className="h-9 w-9 rounded-xl bg-[hsl(var(--brand-cream)/0.15)] flex items-center justify-center group-hover:rotate-6 transition-transform">
+                    <MessageCircle className="h-5 w-5" />
+                  </span>
+                  <span className="flex flex-col items-start leading-tight">
+                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">Conversar</span>
+                    <span className="text-base">WhatsApp</span>
+                  </span>
+                </span>
+                <span className="text-xl opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </a>              
 
               <div className="grid grid-cols-2 gap-2.5">
                 <a
@@ -112,7 +112,7 @@ const Index = () => {
                 </a>
 
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/kipizza.oficial"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2 px-3.5 py-3 rounded-2xl bg-muted/60 hover:bg-muted border border-border/60 hover:border-[hsl(var(--brand-gold)/0.5)] transition-all duration-300 hover:-translate-y-0.5"
@@ -122,7 +122,7 @@ const Index = () => {
                   </span>
                   <span className="flex flex-col leading-tight">
                     <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">Siga</span>
-                    <span className="text-xs font-semibold">@kipizza</span>
+                    <span className="text-xs font-semibold">@kipizza.oficial</span>
                   </span>
                 </a>
               </div>
