@@ -3,7 +3,8 @@ import heroPizza from "@/assets/hero-pizza.jpg";
 import Logo from "@/assets/logo.png";
 
 const WHATSAPP_URL = "https://wa.me/5569993953653?text=Ol%C3%A1%20Ki%20Pizza%2C%20quero%20fazer%20um%20pedido!";
-const PEDIDO_URL = "https://pedido.anota.ai/";
+const PEDIDO_URL_JARU = "https://pedido.anota.ai/loja/ki-pizza";
+const PEDIDO_URL_ROLIM = "https://kipizzarolim.comercio.net.br/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGndK_L2y8IOfYO_4wcwr_z76mqQw0uSd6KNim585VEHJHH_mNaMy365fWy5-U_aem_y93aQ7C1vaInbyfzUewf4A";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Ki+Pizza+Jaru+Rondonia";
 
 const Index = () => {
@@ -62,7 +63,7 @@ const Index = () => {
             {/* CTA Stack */}
             <nav className="mt-5 space-y-2.5" aria-label="Ações principais">
               <a
-                href={PEDIDO_URL}
+                href={PEDIDO_URL_JARU}
                 className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-red animate-pulse-glow hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
               >
                 <span className="flex items-center gap-3">
@@ -70,7 +71,23 @@ const Index = () => {
                     <UtensilsCrossed className="h-5 w-5" />
                   </span>
                   <span className="flex flex-col items-start leading-tight">
-                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">Cardápio digital</span>
+                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">JARU</span>
+                    <span className="text-base">Fazer pedido online</span>
+                  </span>
+                </span>
+                <span className="text-xl opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </a>
+
+              <a
+                href={PEDIDO_URL_ROLIM}
+                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-red animate-pulse-glow hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
+              >
+                <span className="flex items-center gap-3">
+                  <span className="h-9 w-9 rounded-xl bg-[hsl(var(--brand-cream)/0.15)] flex items-center justify-center group-hover:rotate-6 transition-transform">
+                    <UtensilsCrossed className="h-5 w-5" />
+                  </span>
+                  <span className="flex flex-col items-start leading-tight">
+                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">ROLIM DE MOURA</span>
                     <span className="text-base">Fazer pedido online</span>
                   </span>
                 </span>
