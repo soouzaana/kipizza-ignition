@@ -4,7 +4,7 @@ import Logo from "@/assets/logo.png";
 
 const WHATSAPP_URL = "https://wa.me/5569993953653?text=Ol%C3%A1%20Ki%20Pizza%2C%20quero%20fazer%20um%20pedido!";
 const PEDIDO_URL_JARU = "https://pedido.anota.ai/loja/ki-pizza";
-const PEDIDO_URL_ROLIM = "https://kipizzarolim.comercio.net.br/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGndK_L2y8IOfYO_4wcwr_z76mqQw0uSd6KNim585VEHJHH_mNaMy365fWy5-U_aem_y93aQ7C1vaInbyfzUewf4A";
+const PEDIDO_URL_ROLIM = "https://pedido.anota.ai/loja/kipizza-14?f=msa";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Ki+Pizza+Jaru+Rondonia";
 
 const Index = () => {
