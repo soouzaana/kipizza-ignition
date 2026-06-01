@@ -1,11 +1,14 @@
 import { MapPin, MessageCircle, UtensilsCrossed, Sparkles, Instagram } from "lucide-react";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import Logo from "@/assets/logo.png";
+import { Store } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5569993953653?text=Ol%C3%A1%20Ki%20Pizza%2C%20quero%20fazer%20um%20pedido!";
+const WHATSAPP_JARU = "https://wa.me/5569993953653?text=Ol%C3%A1%20Ki%20Pizza%2C%20quero%20fazer%20um%20pedido!";
+const WHATSAPP_ROLIM = "https://wa.me/5569992490668?text=Ol%C3%A1%20Ki%20Pizza%2C%20quero%20fazer%20um%20pedido!";
 const PEDIDO_URL_JARU = "https://pedido.anota.ai/loja/ki-pizza";
 const PEDIDO_URL_ROLIM = "https://pedido.anota.ai/loja/kipizza-14?f=msa";
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Ki+Pizza+Jaru+Rondonia";
+const MAPS_URL_JARU = "https://www.google.com/maps/search/?api=1&query=Ki+Pizza+Jaru+Rondonia";
+const MAPS_URL_ROLIM = "https://www.google.com/maps/search/?api=1&query=Ki+Pizza+Rolim+de+Moura+Rondonia";
 
 const Index = () => {
   return (
@@ -53,111 +56,130 @@ const Index = () => {
                 <span className="shimmer-text">Ki Pizza</span>
               </h1>
               <p className="mt-1.5 text-[11px] sm:text-xs uppercase tracking-[0.32em] text-muted-foreground">
-                Tradição italiana · Jaru — RO
+                Tradição italiana · Rondônia
               </p>
               <p className="mt-3 text-sm text-foreground/85 italic font-display">
                 "Cada fatia, uma noite inesquecível."
               </p>
             </header>
 
-            {/* CTA Stack */}
-            <nav className="mt-5 space-y-2.5" aria-label="Ações principais">
-              <a
-                href={PEDIDO_URL_JARU}
-                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-red animate-pulse-glow hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="h-9 w-9 rounded-xl bg-[hsl(var(--brand-cream)/0.15)] flex items-center justify-center group-hover:rotate-6 transition-transform">
-                    <UtensilsCrossed className="h-5 w-5" />
-                  </span>
-                  <span className="flex flex-col items-start leading-tight">
-                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">JARU</span>
-                    <span className="text-base">Fazer pedido online</span>
-                  </span>
-                </span>
-                <span className="text-xl opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-              </a>
+            <nav className="mt-5 space-y-4" aria-label="Ações principais">
 
-              <a
-                href={PEDIDO_URL_ROLIM}
-                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-red animate-pulse-glow hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="h-9 w-9 rounded-xl bg-[hsl(var(--brand-cream)/0.15)] flex items-center justify-center group-hover:rotate-6 transition-transform">
+              {/* JARU */}
+              <div className="rounded-2xl border border-border/60 bg-muted/20 p-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-lg bg-[hsl(var(--brand-red)/0.15)] flex items-center justify-center">
+                    <Store className="h-4 w-4 text-[hsl(var(--brand-red-glow))]" />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg">Jaru</h3>
+                    <p className="text-xs text-muted-foreground">
+                    Escolha como deseja pedir
+                  </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 mt-3">
+                  <a
+                    href={PEDIDO_URL_JARU}
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                  >
                     <UtensilsCrossed className="h-5 w-5" />
-                  </span>
-                  <span className="flex flex-col items-start leading-tight">
-                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">ROLIM DE MOURA</span>
-                    <span className="text-base">Fazer pedido online</span>
-                  </span>
-                </span>
-                <span className="text-xl opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-              </a>
-              
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] text-[hsl(var(--brand-cream))] font-semibold glow-green  hover:scale-[1.02] hover:-translate-y-0.5 transition-all duration-300 border border-[hsl(var(--brand-cream)/0.15)]"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="h-9 w-9 rounded-xl bg-[hsl(var(--brand-cream)/0.15)] flex items-center justify-center group-hover:rotate-6 transition-transform">
+                    <span className="text-xs">Pedido</span>
+                  </a>
+
+                  <a
+                    href={WHATSAPP_JARU}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                  >
                     <MessageCircle className="h-5 w-5" />
-                  </span>
-                  <span className="flex flex-col items-start leading-tight">
-                    <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">Conversar</span>
-                    <span className="text-base">WhatsApp</span>
-                  </span>
-                </span>
-                <span className="text-xl opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-              </a>              
+                    <span className="text-xs">WhatsApp</span>
+                  </a>
 
-              <div className="grid grid-cols-2 gap-2.5">
-                <a
-                  href={MAPS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-3.5 py-3 rounded-2xl bg-muted/60 hover:bg-muted border border-border/60 hover:border-[hsl(var(--brand-gold)/0.5)] transition-all duration-300 hover:-translate-y-0.5"
-                >
-                  <span className="h-8 w-8 rounded-lg bg-[hsl(var(--brand-gold)/0.15)] flex items-center justify-center">
-                    <MapPin className="h-4 w-4 text-[hsl(var(--brand-gold-glow))]" />
-                  </span>
-                  <span className="flex flex-col leading-tight">
-                    <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">Visite</span>
-                    <span className="text-xs font-semibold">Jaru — RO</span>
-                  </span>
-                </a>
-
-                <a
-                  href="https://instagram.com/kipizza.oficial"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-3.5 py-3 rounded-2xl bg-muted/60 hover:bg-muted border border-border/60 hover:border-[hsl(var(--brand-gold)/0.5)] transition-all duration-300 hover:-translate-y-0.5"
-                >
-                  <span className="h-8 w-8 rounded-lg bg-[hsl(var(--brand-gold)/0.15)] flex items-center justify-center">
-                    <Instagram className="h-4 w-4 text-[hsl(var(--brand-gold-glow))]" />
-                  </span>
-                  <span className="flex flex-col leading-tight">
-                    <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground">Siga</span>
-                    <span className="text-xs font-semibold">@kipizza.oficial</span>
-                  </span>
-                </a>
-              </div>
-            </nav>
-
-            {/* Expansion notice */}
-            <aside className="mt-4 relative overflow-hidden rounded-2xl border border-[hsl(var(--brand-gold)/0.35)] bg-gradient-to-r from-[hsl(var(--brand-gold)/0.10)] via-[hsl(var(--brand-gold)/0.05)] to-transparent px-4 py-3">
-              <div className="flex items-center gap-3">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[hsl(var(--brand-gold))] opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[hsl(var(--brand-gold-glow))]" />
-                </span>
-                <div className="flex flex-col leading-tight">
-                  <span className="text-[9px] uppercase tracking-[0.28em] text-[hsl(var(--brand-gold-glow))] font-bold">Em breve</span>
-                  <span className="text-xs sm:text-sm font-semibold text-foreground/90">Nova unidade · Rolim de Moura — RO</span>
+                  <a
+                    href={MAPS_URL_JARU}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-muted/60 border border-border/60 hover:bg-muted transition-all"
+                  >
+                    <MapPin className="h-5 w-5 text-[hsl(var(--brand-gold-glow))]" />
+                    <span className="text-xs font-semibold">Visitar</span>
+                  </a>
                 </div>
               </div>
-            </aside>
+
+              {/* ROLIM */}
+              <div className="rounded-2xl border border-border/60 bg-muted/20 p-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-lg bg-[hsl(var(--brand-red)/0.15)] flex items-center justify-center">
+                    <Store className="h-4 w-4 text-[hsl(var(--brand-red-glow))]" />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-lg">Rolim de Moura</h3>
+                    <p className="text-xs text-muted-foreground">
+                    Escolha como deseja pedir
+                  </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 mt-3">
+                  <a
+                    href={PEDIDO_URL_ROLIM}
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                  >
+                    <UtensilsCrossed className="h-5 w-5" />
+                    <span className="text-xs">Pedido</span>
+                  </a>
+
+                  <a
+                    href={WHATSAPP_ROLIM}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    <span className="text-xs">WhatsApp</span>
+                  </a>
+
+                  <a
+                    href={MAPS_URL_ROLIM}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-muted/60 border border-border/60 hover:bg-muted transition-all"
+                  >
+                    <MapPin className="h-5 w-5 text-[hsl(var(--brand-gold-glow))]" />
+                    <span className="text-xs font-semibold">Visitar</span>
+                  </a>
+                </div>
+              </div>
+
+            </nav>
+
+            <div className="mt-4">
+              <a
+                href="https://instagram.com/kipizza.oficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 px-4 py-3 rounded-2xl bg-muted/60 hover:bg-muted border border-border/60 hover:border-[hsl(var(--brand-gold)/0.5)] transition-all duration-300"
+              >
+                <span className="h-10 w-10 rounded-xl bg-[hsl(var(--brand-gold)/0.15)] flex items-center justify-center">
+                  <Instagram className="h-5 w-5 text-[hsl(var(--brand-gold-glow))]" />
+                </span>
+
+                <div className="flex flex-col">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    Siga no Instagram
+                  </span>
+                  <span className="font-semibold">
+                    @kipizza.oficial
+                  </span>
+                </div>
+              </a>
+            </div>
 
             {/* Footer */}
             <footer className="mt-4 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.28em] text-muted-foreground/70">
