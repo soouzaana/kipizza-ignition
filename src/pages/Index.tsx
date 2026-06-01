@@ -26,7 +26,7 @@ const Index = () => {
           <div aria-hidden className="h-1 w-full ring-italia opacity-80" />
 
           {/* Hero image */}
-          <div className="relative h-40 sm:h-44 w-full overflow-hidden">
+          <div className="relative h-28 sm:h-32 w-full overflow-hidden">
             <img
               src={heroPizza}
               alt="Pizza artesanal Ki Pizza"
@@ -42,10 +42,10 @@ const Index = () => {
           </div>
 
           {/* Content */}
-          <div className="px-6 pb-6 -mt-6 relative">
+          <div className="px-5 pb-4 -mt-6 relative">
             {/* Logo / Brand mark */}
             <div className="flex justify-center ">
-              <div className="relative h-20 w-20 rounded-2xl bg-gradient-to-br from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] flex items-center justify-center shadow-[0_15px_40px_-12px_hsl(var(--brand-red)/0.7)] border border-[hsl(var(--brand-gold)/0.4)] rotate-3">
+              <div className="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] flex items-center justify-center shadow-[0_15px_40px_-12px_hsl(var(--brand-red)/0.7)] border border-[hsl(var(--brand-gold)/0.4)] rotate-3">
                 <img src={Logo} alt="Ki Pizza Logo" className="h-full w-full rounded-2xl" width={50} height={50} />
               </div>
             </div>
@@ -74,18 +74,15 @@ const Index = () => {
 
                   <div>
                     <h3 className="font-bold text-lg">Jaru</h3>
-                    <p className="text-xs text-muted-foreground">
-                    Escolha como deseja pedir
-                  </p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-3 gap-2 mt-3">
                   <a
                     href={PEDIDO_URL_JARU}
-                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] py-2.5 text-[hsl(var(--brand-cream))] font-semibold"
                   >
-                    <UtensilsCrossed className="h-5 w-5" />
+                    <UtensilsCrossed className="h-4 w-4" />
                     <span className="text-xs">Pedido</span>
                   </a>
 
@@ -93,9 +90,9 @@ const Index = () => {
                     href={WHATSAPP_JARU}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] py-2.5 text-[hsl(var(--brand-cream))] font-semibold"
                   >
-                    <MessageCircle className="h-5 w-5" />
+                    <MessageCircle className="h-4 w-4" />
                     <span className="text-xs">WhatsApp</span>
                   </a>
 
@@ -105,7 +102,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center gap-2 rounded-xl bg-muted/60 border border-border/60 hover:bg-muted transition-all"
                   >
-                    <MapPin className="h-5 w-5 text-[hsl(var(--brand-gold-glow))]" />
+                    <MapPin className="h-4 w-4 text-[hsl(var(--brand-gold-glow))]" />
                     <span className="text-xs font-semibold">Visitar</span>
                   </a>
                 </div>
@@ -120,18 +117,15 @@ const Index = () => {
 
                   <div>
                     <h3 className="font-bold text-lg">Rolim de Moura</h3>
-                    <p className="text-xs text-muted-foreground">
-                    Escolha como deseja pedir
-                  </p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-3 gap-2 mt-3">
                   <a
                     href={PEDIDO_URL_ROLIM}
-                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-red))] to-[hsl(var(--brand-red-glow))] py-2.5 text-[hsl(var(--brand-cream))] font-semibold"
                   >
-                    <UtensilsCrossed className="h-5 w-5" />
+                    <UtensilsCrossed className="h-4 w-4" />
                     <span className="text-xs">Pedido</span>
                   </a>
 
@@ -139,9 +133,9 @@ const Index = () => {
                     href={WHATSAPP_ROLIM}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] py-4 text-[hsl(var(--brand-cream))] font-semibold"
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[hsl(var(--brand-green))] to-[hsl(var(--brand-green-glow))] py-2.5 text-[hsl(var(--brand-cream))] font-semibold"
                   >
-                    <MessageCircle className="h-5 w-5" />
+                    <MessageCircle className="h-4 w-4" />
                     <span className="text-xs">WhatsApp</span>
                   </a>
 
@@ -151,7 +145,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center gap-2 rounded-xl bg-muted/60 border border-border/60 hover:bg-muted transition-all"
                   >
-                    <MapPin className="h-5 w-5 text-[hsl(var(--brand-gold-glow))]" />
+                    <MapPin className="h-4 w-4 text-[hsl(var(--brand-gold-glow))]" />
                     <span className="text-xs font-semibold">Visitar</span>
                   </a>
                 </div>
@@ -167,7 +161,7 @@ const Index = () => {
                 className="group flex items-center gap-3 px-4 py-3 rounded-2xl bg-muted/60 hover:bg-muted border border-border/60 hover:border-[hsl(var(--brand-gold)/0.5)] transition-all duration-300"
               >
                 <span className="h-10 w-10 rounded-xl bg-[hsl(var(--brand-gold)/0.15)] flex items-center justify-center">
-                  <Instagram className="h-5 w-5 text-[hsl(var(--brand-gold-glow))]" />
+                  <Instagram className="h-4 w-4 text-[hsl(var(--brand-gold-glow))]" />
                 </span>
 
                 <div className="flex flex-col">
